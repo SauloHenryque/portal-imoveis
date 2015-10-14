@@ -136,7 +136,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
+        
         /*
          * Application Service Providers...
          */
@@ -144,6 +145,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        'Pingpong\Modules\ModulesServiceProvider',
+        Collective\Html\HtmlServiceProvider::class,
+  
 
     ],
 
@@ -193,6 +197,9 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Module'    => 'Pingpong\Modules\Facades\Module',
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
 
     ],
 
