@@ -13,16 +13,34 @@
         
                     <div class="box-body">
                         
-                        <canvas id="pieChar" style="height: 300px; width: 647px;" width="647" height="323"></canvas>
-            
-<!--                        <table class="table table-bordered text-center">
-                
-                            {!! Form:: open(array('url'=>'admin/imovel/salvar'))!!}
-            
-        
-                            {!! Form:: close()!!}
-            
-                        </table>-->
+                        <table class="table table-striped table-bordered table-hover">
+                            <tr>
+                                    <th>ID</th>
+                                    <th>NOME</th>
+                                    <th>DATA CADASTRO</th>
+                                    <th>UF</th>
+                                    <th>VALOR</th>
+                                    <th>QUARTOS</th>
+                                    <th>VAGAS</th>
+                            </tr>
+                            <?php //  echo $imovel->nome; exit(); ?>
+                             <?php foreach($imovel as $imoveis ): ?>
+                            <tr>
+                                <td>
+                                    <!--admin/imovel/1/editar-->
+                                    <a href="{{asset('admin/imovel/'.$imoveis['id']. '/editar')}}" style="text-decoration:none; color:#000; font-weight: bold;">
+                                    <?php echo $imoveis['id']?>
+                                </td>
+                                <td><?php echo $imoveis['nome']?></td>
+                                <td><?php echo $imoveis['data_cadastro']?></td>
+                                <td><?php echo $imoveis['uf']?></td>
+                                <td><?php echo $imoveis['valor']?></td>
+                                <td><?php echo $imoveis['quartos']?></td>
+                                <td><?php echo $imoveis['vagas']?></td>
+                            </tr>
+                            <?php endforeach; ?>
+                        
+                        </table>
             
                     </div>
         

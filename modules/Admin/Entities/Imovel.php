@@ -8,7 +8,7 @@ class Imovel extends EntityAbstract {
 //    use SoftDeletes;
     
     protected $table='imovel';
-    protected $fillable = ['nome','descricao','valor'];
+    protected $fillable = ['nome','data_cadastro','uf','valor','quartos','vagas','negociacao','endereco','bairro','cidade','cep','numero','responsavel','publicado'];
     
     public function imovelImagem()
     {

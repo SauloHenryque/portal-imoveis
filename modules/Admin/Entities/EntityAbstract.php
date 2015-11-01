@@ -9,8 +9,9 @@ abstract class EntityAbstract extends Model {
     
     public function saveOrUpdate($dados)
     {
-//        dd($dados);
         if(!isset($dados['id']) || !$dados['id']){
+//            dd($dados);
+            
             $entity =  $this->create($dados);
 //            $entity = static::create($dados);
             return $entity; 
